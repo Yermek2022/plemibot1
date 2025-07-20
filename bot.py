@@ -5,10 +5,11 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.enums import ParseMode
 from aiogram.filters import Command
 from aiogram.types import Message
+from aiogram.client.default import DefaultBotProperties
 
 TOKEN = os.getenv("BOT_TOKEN")
 
-bot = Bot(token=TOKEN, parse_mode=ParseMode.HTML)
+bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 dp = Dispatcher()
 
 @dp.message(Command("start"))
@@ -20,5 +21,5 @@ async def main():
     print("✅ Бот запускается...")
     await dp.start_polling(bot)
 
-if __name__ == "__main__":
+if _name_ == "_main_":
     asyncio.run(main())
