@@ -1,5 +1,5 @@
-aiogram
-gspread
-oauth2client
-requests
-schedule
+aiogram==3.21.0
+gspread==6.2.1
+oauth2client==4.1.3
+requests==2.32.4
+schedule==1.2.2
